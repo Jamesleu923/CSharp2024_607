@@ -1,0 +1,93 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Schema;
+
+namespace _20241025_ifelse_TEST
+{
+    internal class Program
+    {
+  
+        static void Main(string[] args)
+        {
+            int x=0,y=0,UserOption;
+            do
+            {         
+                Console.WriteLine("請輸入任意二個整數做加減乘除，輸入二個數都0為結束!");
+                Console.WriteLine("輸入X:");
+                x =int.Parse( Console.ReadLine());
+                Console.WriteLine("輸入Y:");
+                y =int.Parse(Console.ReadLine());
+                if (x == 0 && y == 0)
+                    break; //結束do while.
+              
+                Console.WriteLine("請選擇:1.加 2.減 3.乖 4.除 5.結束");
+                UserOption= int.Parse(Console.ReadLine());
+
+                switch (UserOption)
+                {
+                    case 1:
+                        Console.WriteLine("呼叫相加函式");
+                        //叫用函式....
+                        fun01();//相加
+                        break;
+
+                    case 2:
+                        Console.WriteLine("呼叫相減函式");
+                        fun02(); //叫用函式....
+                                    
+                        break;
+
+                    case 3:
+                        Console.WriteLine("呼叫相乘函式");
+                        //叫用函式....
+                        fun03();//叫用函式..
+                        break;
+
+                    case 4:
+                        Console.WriteLine("呼叫相除函式");
+                        //叫用函式....
+                        fun04();  //叫用函式..
+                        break;
+
+                    default:
+                        Console.WriteLine("結束!");
+                        break;
+                }
+
+            } while (UserOption<=4);
+
+            Console.WriteLine("程式結束,按任意鍵....");
+            Console.ReadLine();
+        }
+
+        static void fun01()
+        {
+            Console.WriteLine("相加函式進來了!請按任意鍵");
+            Console.ReadLine();
+            Console.Clear();
+        }
+
+        static void fun02()
+        {
+            Console.WriteLine("相減函式進來了!請按任意鍵");
+            Console.ReadLine();
+            Console.Clear();
+        }
+        static void fun03()
+        {
+            Console.WriteLine("相乘函式進來了!請按任意鍵");
+            Console.ReadLine();
+            Console.Clear();
+        }
+        static void fun04()
+        {
+            Console.WriteLine("相除函式進來了!請按任意鍵");
+            Console.ReadLine();
+            Console.Clear();
+        }
+    }
+    
+}

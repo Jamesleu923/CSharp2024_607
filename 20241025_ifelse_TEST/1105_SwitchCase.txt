@@ -1,0 +1,80 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Schema;
+
+namespace _20241025_ifelse_TEST
+{
+    internal class Program
+    {
+        //Withdraw/Deposit/Balance Inquiry
+        static void Main(string[] args)
+        {
+            int UserOption;
+            do
+            {         
+                Console.WriteLine("請輸入 1.存款 2.提款 3.查詢資料 4.結束,請輸入(1-4)");
+                UserOption = int.Parse(Console.ReadLine());
+
+                switch (UserOption)
+                {
+                    case 1:
+                        Console.WriteLine("呼叫存款函式");
+                        //叫用函式....
+                        Deposit();//存款
+                        break;
+
+                    case 2:
+                        Console.WriteLine("呼叫提款函式");
+                        Withdraw(); //叫用函式....
+                                    //提款
+                        break;
+
+                    case 3:
+                        Console.WriteLine("呼叫查詢資料函式");
+                        //叫用函式....
+                        QueryBI(); //查詢
+                        break;
+
+                    default:
+                        Console.WriteLine("結束!");
+                        break;
+                }
+
+            } while (UserOption<=3);
+
+            Console.ReadLine();
+        }
+
+        static void Withdraw( )
+        {
+            Console.WriteLine("提款函式進來了!請按任意鍵");
+            Console.ReadLine();
+            Console.Clear();
+
+        }
+        static void Deposit()
+        {
+            Console.WriteLine("存款函式進來了!!請按任意鍵");
+            Console.ReadLine();
+            Console.Clear();
+
+        }
+        static void QueryBI()
+        {
+            Console.WriteLine("查餘額函式進來了!!請按任意鍵");
+            Console.ReadLine();
+            Console.Clear();
+        }
+        static void CourseSelect()
+        {
+            Console.WriteLine("選課函式進來了!!請按任意鍵");
+            Console.ReadLine();
+            Console.Clear();
+        }
+      
+    }
+    
+}

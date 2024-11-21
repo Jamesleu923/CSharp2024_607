@@ -1,0 +1,6 @@
+﻿double score;
+            Console.WriteLine("請輸入成績:");
+            score=double.Parse(Console.ReadLine());
+            String[] Level = { "一級分", "二級分", " 三級分", "四級分", "五級分" };
+            int Index = 0;
+            if (score >= 0 && score < 30)
